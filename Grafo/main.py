@@ -22,13 +22,14 @@ def main():
 
             origem = vertices[0]
             destino = vertices[1]
+            peso = int(vertices[2])
 
             indice_origem = indices[origem]
             indice_destino = indices[destino]
 
-            matriz[indice_origem][indice_destino] = 1
+            matriz[indice_origem][indice_destino] = peso
             if direcional == False:
-                matriz[indice_destino][indice_origem] = 1
+                matriz[indice_destino][indice_origem] = peso
 
         count_linha += 1
 
@@ -40,5 +41,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
